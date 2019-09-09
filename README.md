@@ -30,7 +30,7 @@ $ gradle allurereport allureserve
 
 Allure report will open in your Chrome Browser automatically and details report will be found in #Suites
 ##### NB. 
-If you want to share the allure report link to others, make sure that your PC is turned on and you and the shared user must be in same network
+If you want to share the allure report link to others, make sure that your PC is turned on.Alse, you and the shared user must be in same network
 
 
 
