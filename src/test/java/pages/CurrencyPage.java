@@ -106,33 +106,29 @@ public class CurrencyPage extends BasePage{
             Thread.sleep(2000);
             addButton.click();
             Thread.sleep(2000);
-            driver.findElement(By.name("cHRfY3VycmVuY2llcy5uYW1l")).sendKeys("বিডিটি");
+            currencyName.clear();
             Thread.sleep(1000);
-            driver.findElement(By.name("cHRfY3VycmVuY2llcy5zeW1ib2w-")).sendKeys("ক");
+            currencySymbol.sendKeys("123");
             Thread.sleep(1000);
-            driver.findElement(By.name("cHRfY3VycmVuY2llcy5jb2Rl")).sendKeys("বিডিটি");
+            currencyCode.sendKeys("বিডি");
             Thread.sleep(1000);
-            driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[3]/div/div/div[1]/div[1]/a[1]")).click();
+            saveAndReturnButton.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-
-
     public void editNegativeCurrency() {
         try {
             driver.get("https://www.phptravels.net/admin/settings/currencies");
             Thread.sleep(1000);
-            addButton.click();
+            editButton.click();
             Thread.sleep(1000);
-            driver.findElement(By.name("cHRfY3VycmVuY2llcy5yYXRl")).sendKeys("+");
+            currencyName.clear();
+            currencyName.sendKeys("+-/");
             JavascriptExecutor je = (JavascriptExecutor) driver;
             je.executeScript("window.scrollBy(0,1000)");
-            driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[3]/div/div/div[1]/div[1]/a[1]")).click();
-            String Result = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[3]/div/div/div[3]")).getText();
-            Assert.assertTrue(Result.contains("contain errors"));
-            System.out.print(Result);
+            saveAndReturnButton.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

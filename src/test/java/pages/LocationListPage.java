@@ -79,4 +79,22 @@ public class LocationListPage extends BasePage{
             e.printStackTrace();
         }
     }
+
+    public void addLocationWithoutMandatoryValue() {
+        try {
+            driver.get("https://www.phptravels.net/supplier/locations");
+            addButton.click();
+            Thread.sleep(5000);
+            location.sendKeys("Dhaka University");
+            Thread.sleep(2000);
+            location.sendKeys(Keys.ARROW_DOWN);
+            location.sendKeys(Keys.ENTER);
+            Thread.sleep(2000);
+            JavascriptExecutor je = (JavascriptExecutor) driver;
+            je.executeScript("window.scrollBy(0,1000)");
+            submitButton.click();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

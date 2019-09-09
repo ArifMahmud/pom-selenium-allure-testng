@@ -126,6 +126,30 @@ public class TestCase {
         Utility.attachScreenShot(driver);
     }
 
+    @Test(priority = 10)
+    @Description("Try to add a Currency with Negative value")
+    public void testAddNegativeCurrency() {
+        currencyPage = new CurrencyPage(driver);
+        currencyPage.addNegativeCurrency();
+        Utility.attachScreenShot(driver);
+    }
+
+    @Test(priority = 11)
+    @Description("Try to edit a Currency with Negative value")
+    public void testEditCurrencyWithNegativeValue() {
+        currencyPage = new CurrencyPage(driver);
+        currencyPage.editNegativeCurrency();
+        Utility.attachScreenShot(driver);
+    }
+
+    @Test(priority = 12)
+    @Description("Try to edit a Currency with Negative value")
+    public void testAddLocationWithoutMandatoryField() {
+        locationListPage = new LocationListPage(driver);
+        locationListPage.addLocationWithoutMandatoryValue();
+        Utility.attachScreenShot(driver);
+    }
+
     @AfterTest
     public void tearDown(){
         //driver.close();
