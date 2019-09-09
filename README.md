@@ -13,14 +13,10 @@ I have followed POM staructure for this automation project. Project has been mad
 3. After step 2, run allure report with allure.
 4. Check the report in generated allure report in its server
 
-##### NB. 
-If you want to share the allure report link to others, make sure that your PC is turned on and you and the shared user must be in same network
-
 ### Building with Gradle
 ```sh
 $ gradle clean test
 ```
-Downloaded files (including the Gradle distribution itself) will be stored in the Gradle user home directory (typically `user_home/.gradle`).
 
 ### Building report with Allure
 
@@ -31,6 +27,10 @@ For first time report generation with allure, Need to run in the following comma
 ```sh
 $ gradle allurereport allureserve
 ```
+
+Allure report will open in your Chrome Browser automatically and details report will be found in #Suites
+##### NB. 
+If you want to share the allure report link to others, make sure that your PC is turned on and you and the shared user must be in same network
 
 
 
