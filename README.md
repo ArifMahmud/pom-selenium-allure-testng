@@ -1,6 +1,7 @@
+# pom-selenium-alure-testng
+
 I have followed POM staructure for this automation project. Project has been made as a TestNG project and for a better report viewing purpose, I have added Allure reporting tool to this project.
 
-# pom-selenium-alure-testng
 # Prerequisites
 * JDK `8` or higher
 * Gradle use `4.0.1` (Download Gradle from https://gradle.org/releases/ and keep Gradle files in C:\Program Files)
