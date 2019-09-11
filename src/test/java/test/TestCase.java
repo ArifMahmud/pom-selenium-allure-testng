@@ -59,7 +59,7 @@ public class TestCase {
     }
 
     @Test(priority = 2)
-    @Description("Try to Create a new Cuurency")
+    @Description("Try to Create a new Currency")
     public void testAddCurrency() {
         currencyPage = new CurrencyPage(driver);
         currencyPage.addCurrency();
@@ -90,6 +90,22 @@ public class TestCase {
     }
 
     @Test(priority = 6)
+    @Description("Try to add a Currency with Negative value")
+    public void testAddNegativeCurrency() {
+        currencyPage = new CurrencyPage(driver);
+        currencyPage.addNegativeCurrency();
+        Utility.attachScreenShot(driver);
+    }
+
+    @Test(priority = 7)
+    @Description("Try to edit a Currency with Negative value")
+    public void testEditCurrencyWithNegativeValue() {
+        currencyPage = new CurrencyPage(driver);
+        currencyPage.editNegativeCurrency();
+        Utility.attachScreenShot(driver);
+    }
+
+    @Test(priority = 8)
     @Description("Load Location page")
     public void testLoadLocationListPage() throws InterruptedException {
         JavascriptExecutor je = (JavascriptExecutor) driver;
@@ -102,7 +118,7 @@ public class TestCase {
         Utility.attachScreenShot(driver);
     }
 
-    @Test(priority = 7)
+    @Test(priority = 9)
     @Description("Try to add a location")
     public void testAddLocation() {
         locationListPage = new LocationListPage(driver);
@@ -110,7 +126,7 @@ public class TestCase {
         Utility.attachScreenShot(driver);
     }
 
-    @Test(priority = 8)
+    @Test(priority = 10)
     @Description("Try to edit a location details")
     public void testEditLocation() {
         locationListPage = new LocationListPage(driver);
@@ -118,7 +134,7 @@ public class TestCase {
         Utility.attachScreenShot(driver);
     }
 
-    @Test(priority = 9)
+    @Test(priority = 11)
     @Description("Try to delete a location")
     public void testDeleteLocation() {
         locationListPage = new LocationListPage(driver);
@@ -126,24 +142,8 @@ public class TestCase {
         Utility.attachScreenShot(driver);
     }
 
-    @Test(priority = 10)
-    @Description("Try to add a Currency with Negative value")
-    public void testAddNegativeCurrency() {
-        currencyPage = new CurrencyPage(driver);
-        currencyPage.addNegativeCurrency();
-        Utility.attachScreenShot(driver);
-    }
-
-    @Test(priority = 11)
-    @Description("Try to edit a Currency with Negative value")
-    public void testEditCurrencyWithNegativeValue() {
-        currencyPage = new CurrencyPage(driver);
-        currencyPage.editNegativeCurrency();
-        Utility.attachScreenShot(driver);
-    }
-
     @Test(priority = 12)
-    @Description("Try to edit a Currency with Negative value")
+    @Description("Try to edit a location with Negative value")
     public void testAddLocationWithoutMandatoryField() {
         locationListPage = new LocationListPage(driver);
         locationListPage.addLocationWithoutMandatoryValue();
@@ -152,7 +152,7 @@ public class TestCase {
 
     @AfterTest
     public void tearDown(){
-        //driver.close();
+        driver.close();
     }
 
 }
