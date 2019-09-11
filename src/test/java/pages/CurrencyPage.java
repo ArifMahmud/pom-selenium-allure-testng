@@ -103,12 +103,12 @@ public class CurrencyPage extends BasePage{
 
         try {
             driver.get("https://www.phptravels.net/admin/settings/currencies");
-            Thread.sleep(2000);
+            Thread.sleep(2000);//a[@class='btn btn-success xcrud-action']"
             addButton.click();
             Thread.sleep(2000);
-            currencyName.clear();
+            currencyName.sendKeys("বিডি");
             Thread.sleep(1000);
-            currencySymbol.sendKeys("123");
+            currencySymbol.sendKeys("458");
             Thread.sleep(1000);
             currencyCode.sendKeys("বিডি");
             Thread.sleep(1000);
