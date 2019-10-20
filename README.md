@@ -1,4 +1,4 @@
-# pom-selenium-alure-testng
+# pom-selenium-allure-testng
 
 I have followed POM staructure for this automation project. Project has been made as a TestNG project and for a better report viewing purpose, I have added Allure reporting tool to this project.
 
