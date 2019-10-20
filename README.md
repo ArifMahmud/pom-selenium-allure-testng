@@ -8,7 +8,7 @@ I have followed POM staructure for this automation project. Project has been mad
 * Chrome version `64.0`
 
 ### How to run test and check the test report
-1. After cloning the project, go to the directory `".\pom-selenium-allure-testng`
+1. After cloning the project, go to the directory `.\pom-selenium-allure-testng`
 2. Build the automation project with gradle.
 3. After step 2, run allure report with allure.
 4. Check the report in generated allure report in its server
